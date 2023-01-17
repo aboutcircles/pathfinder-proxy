@@ -13,7 +13,7 @@ The proxy is still in development and not yet ready for production.
 ### Start the proxy
 1. Clone the repository
 2. Install dependencies with `npm install`
-3. Compile typescript with `npx tsx`
+3. Compile typescript with `npx tsc`
 4. Start the proxy with `node dist/main.js`
 
 ### Send requests
