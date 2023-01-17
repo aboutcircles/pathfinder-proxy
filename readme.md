@@ -17,7 +17,7 @@ The proxy is still in development and not yet ready for production.
 4. Start the proxy with `node dist/main.js`
 
 ### Send requests
-The proxy listens on port 5000 for incoming requests.
+The proxy listens on port 4999 for incoming requests.
 It accepts POST requests to the `/` path.  
 
 You can use the following curl command to test the proxy:

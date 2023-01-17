@@ -82,17 +82,22 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', async (req, res) => {
-  const call = await req.body;
-  const canPass = filter.canPass(call);
-  if (!canPass) {
-    res.status(400).send('RPC method not allowed');
-    return;
-  }
+  try {
+    const call = await req.body;
+    const canPass = filter.canPass(call);
+    if (!canPass) {
+      res.status(400).send('RPC method not allowed');
+      return;
+    }
 
-  const response = await upstreamPool.dispatchRoundRobin(call);
-  res.send(response);
+    const response = await upstreamPool.dispatchRoundRobin(call);
+    res.send(response);
+  } catch (e) {
+    // return 500
+    res.status(500).send(e);
+  }
 });
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
-})
+});
