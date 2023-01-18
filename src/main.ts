@@ -5,15 +5,16 @@ import {HttpStatusCodeHealthcheck} from "./healthchecks/httpStatusCodeHealthchec
 import {StatisticsLogger} from "./statistics/statisticsLogger";
 import {MethodFilter} from "./filter/methodFilter";
 import {StatisticsQueries} from "./statistics/statisticsQueries";
+import {Environment} from "./environment";
+
+Environment.validateAndSummarize();
 
 const app = express();
 app.use(express.json());
 
-const port = 4999;
-
 const upstreamPool = new UpstreamPool(5000, 1000);
 
-// Store two minutes of statistics with a resolution of 1 second
+// Store two minutes of statistics with a resolution of 1 second per upstream service
 const statisticsSettings = {
   interval: 1000,
   historySize: 120
@@ -98,6 +99,6 @@ app.post('/', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(Environment.port, () => {
+  console.log(`Example app listening on port ${Environment.port}`)
 });
