@@ -20,21 +20,16 @@ const statisticsSettings = {
   historySize: 120
 };
 
-const upstream1Url = 'https://rpc.helsinki.circlesubi.id';
-const upstream1 = new UpstreamService(upstream1Url + "/pathfinder",
-  new HttpStatusCodeHealthcheck(upstream1Url, 1000),
-  new StatisticsLogger(statisticsSettings.interval, statisticsSettings.historySize))
+Environment.upstreamServiceEndpoints.forEach((upstreamUrl, index) => {
+  const healthcheckUrl = Environment.upstreamHealthEndpoints[index];
+  const upstreamService = new UpstreamService(
+    upstreamUrl.toString()
+    , new HttpStatusCodeHealthcheck(healthcheckUrl.toString(), 1000)
+    , new StatisticsLogger(statisticsSettings.interval, statisticsSettings.historySize));
 
-upstream1.statisticsLogger.start();
-upstreamPool.registerUpstreamService(upstream1);
-
-const upstream2Url = 'https://rpc.falkenstein.circlesubi.id';
-const upstream2 = new UpstreamService(upstream2Url + "/pathfinder",
-    new HttpStatusCodeHealthcheck(upstream2Url, 1000),
-    new StatisticsLogger(statisticsSettings.interval, statisticsSettings.historySize));
-
-upstream2.statisticsLogger.start();
-upstreamPool.registerUpstreamService(upstream2);
+  upstreamService.statisticsLogger.start();
+  upstreamPool.registerUpstreamService(upstreamService);
+});
 
 upstreamPool.start();
 
