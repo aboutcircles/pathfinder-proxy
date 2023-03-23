@@ -17,13 +17,18 @@ export class UpstreamService {
   async dispatch(call: RpcCall) : Promise<unknown> {
     this.statisticsLogger.request(call.id);
 
-    console.log(`Dispatching call ${call.id} to upstream ${this.url}`);
+    const start = Date.now();
 
     const request = await fetch(this.url, {
       method: 'POST',
       body: JSON.stringify(call),
       headers: { 'Content-Type': 'application/json' }
     });
+
+    const end = Date.now();
+    const duration = end - start;
+
+    console.log(JSON.stringify(call) + " took " + duration + "ms.");
 
     try {
       const response = await request.json();

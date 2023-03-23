@@ -144,7 +144,6 @@ export class StatisticsLogger {
   private onIntervalElapsed() {
     if (this._active) {
       this.history.push(this._active);
-      console.log("New history slice: " + this._active.startTimestamp, this._active.eventLog);
     }
 
     const newActive = new TimeSlice(Date.now(), this.interval);
@@ -163,7 +162,6 @@ export class StatisticsLogger {
       }
       if (pendingSlice.isBalanced()) {
         // Balanced means that all requests have been responded to. Can be removed.
-        console.log("Removing completed time slice from 'pending' list: " + pendingSlice.startTimestamp, pendingSlice.eventLog);
         this.pending.splice(i, 1);
       }
     }
