@@ -25,13 +25,13 @@ export class UpstreamService {
       headers: { 'Content-Type': 'application/json' }
     });
 
-    const end = Date.now();
-    const duration = end - start;
-
-    console.log(JSON.stringify(call) + " took " + duration + "ms.");
-
     try {
       const response = await request.json();
+
+      const end = Date.now();
+      const duration = end - start;
+      console.log(JSON.stringify(call) + " took " + duration + "ms.");
+
       this.statisticsLogger.response(call.id);
       return response;
     } catch (e) {
