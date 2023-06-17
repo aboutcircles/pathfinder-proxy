@@ -6,6 +6,7 @@ import {StatisticsLogger} from "./statistics/statisticsLogger";
 import {MethodFilter} from "./filter/methodFilter";
 import {StatisticsQueries} from "./statistics/statisticsQueries";
 import {Environment} from "./environment";
+import {HealthMonitor, HealthStatus} from "./upstream/healthMonitor";
 
 Environment.validateAndSummarize();
 
@@ -74,7 +75,7 @@ app.get('/', (req, res) => {
     statusString += "-> " + JSON.stringify(avgs) + "<br/>";
   });
 
-  if (upstreamPool.status === "unhealthy") {
+  if (upstreamPool.status === <HealthStatus>"down") {
     res.status(500);
   }
 
