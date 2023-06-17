@@ -74,6 +74,10 @@ app.get('/', (req, res) => {
     statusString += "-> " + JSON.stringify(avgs) + "<br/>";
   });
 
+  if (upstreamPool.status === "unhealthy") {
+    res.status(500);
+  }
+
   res.send(statusString);
 });
 
