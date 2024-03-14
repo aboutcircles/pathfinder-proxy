@@ -14,7 +14,8 @@ export class HttpStatusCodeHealthcheck implements Healthcheck {
       const fetchResult = await fetch(this.url, {
         method: "GET"
       });
-      return fetchResult.status === 200;
+      return fetchResult.status.toString().startsWith("2")
+          || fetchResult.status.toString().startsWith("3");
     } catch (e) {
       return false;
     }
