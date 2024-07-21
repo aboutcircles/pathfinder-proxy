@@ -1,4 +1,4 @@
-import {MethodFilter} from "../src/filter/methodFilter";
+import {MethodFilter} from "../src/methodFilter";
 
 describe("MethodFilter", () => {
   it('should allow all whitelisted methods', () => {
