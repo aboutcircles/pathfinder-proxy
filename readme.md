@@ -6,9 +6,6 @@ The vanilla pathfinder listens on a configurable port for incoming rpc-calls.
 Some rpc functions allow to change the pathfinder's state which should not be possible from outside.
 This proxy limits access to only whitelisted rpc-functions and also acts as a load balancer and auto scaler.
 
-## Status
-The proxy is still in development and not yet ready for production.
-
 ## Usage
 ### Configuration
 The proxy can be configured with the following environment variables:  

@@ -1,5 +1,5 @@
 FROM node:latest
-LABEL org.opencontainers.image.source=https://github.com/CirclesUBI/pathfinder-proxy
+LABEL org.opencontainers.image.source=https://github.com/aboutcircles/pathfinder-proxy
 
 COPY . /usr/pathfinder-proxy
 WORKDIR /usr/pathfinder-proxy

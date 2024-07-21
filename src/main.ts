@@ -5,39 +5,30 @@ import {LoadBalancer} from "./loadBalancer";
 import {MethodFilter} from "./methodFilter";
 import {RpcCall} from "./rpcCall";
 import {Node} from "./node";
+import fs from 'fs';
+import path from 'path';
 
 export const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
+const CONFIG_FILE = process.env.CONFIG_FILE || './config.json';
 
-// Node configurations
-const nodeConfigs: NodeConfig[] = [
-    {
-        id: 'node1',
-        url: 'http://127.0.0.1:8080',
-        cores: 4,
-        allowedOverload: 1.25,
-        healthUrl: 'http://host1:4000/health',
-        healthCheckInterval: 5000
-    }/*,
-    {
-        id: 'node2',
-        url: 'http://host2:4000',
-        cores: 8,
-        allowedOverload: 1.5,
-        healthUrl: 'http://host2:4000/health',
-        healthCheckInterval: 5000
-    },
-    {
-        id: 'node3',
-        url: 'http://host3:4000',
-        cores: 2,
-        allowedOverload: 1.0,
-        healthUrl: 'http://host3:4000/health',
-        healthCheckInterval: 5000
-    }*/
-];
+// Function to load node configurations from a JSON file
+const loadNodeConfigs = (filePath: string): NodeConfig[] => {
+    try {
+        const configPath = path.resolve(__dirname, filePath);
+        const configData = fs.readFileSync(configPath, 'utf-8');
+        const config = JSON.parse(configData);
+        return config.nodes;
+    } catch (error) {
+        console.error(`Error loading node configurations:`, error);
+        process.exit(1);
+    }
+};
+
+// Load node configurations from config.json
+const nodeConfigs: NodeConfig[] = loadNodeConfigs(CONFIG_FILE);
 
 // Create an instance of LoadBalancer with the given node configurations
 const loadBalancer = new LoadBalancer(nodeConfigs);
@@ -60,7 +51,7 @@ app.post('/', async (req: Request, res: Response) => {
             return;
         }
 
-        const node = loadBalancer.assignRequest();
+        node = loadBalancer.assignRequest();
         const startTime = Date.now();
 
         // Forward the request to the selected node

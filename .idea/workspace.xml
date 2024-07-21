@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d029eb68-6594-4895-9c0e-e011b64a2ae5" name="Changes" comment="more relaxed success status code for healthcheck">
-      <change afterPath="$PROJECT_DIR$/src/loadBalancer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/methodFilter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/node.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/nodeConfig.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/rpcCall.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/loadBalancer.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/node.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/routes.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/testServer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/healthMonitor.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/httpHealthCheck.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/methodFilter.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/methodFilter.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/statisticsLogger.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/statisticsQueries.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/upstreamPool.test.ts" beforeDir="false" />
+    <list default="true" id="d029eb68-6594-4895-9c0e-e011b64a2ae5" name="Changes" comment="2.0.0">
+      <change beforePath="$PROJECT_DIR$/tests/loadBalancer.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/loadBalancer.test.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +64,7 @@
     "Jest.Node Class.executor": "Run",
     "Jest.Node Class.should not exceed allowed overload.executor": "Debug",
     "Jest.Node Class.should perform health check correctly.executor": "Run",
+    "Jest.Tests in tests/.executor": "Run",
     "Jest.loadBalancer.test.ts.executor": "Run",
     "Jest.methodFilter.test.ts.executor": "Run",
     "Jest.node.test.ts.executor": "Run",
@@ -89,7 +73,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TF_FMT": "false",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "feat/load-balance",
     "kotlin-language-version-configured": "true",
@@ -118,7 +101,7 @@
       <recent name="$PROJECT_DIR$/src/statistics" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.Node Class.should perform health check correctly">
+  <component name="RunManager" selected="Jest.Tests in tests/">
     <configuration name="Node Class" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -157,6 +140,15 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in tests/" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="DIRECTORY" />
+      <test-directory value="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
     <configuration name="node.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -164,15 +156,6 @@
       <envs />
       <scope-kind value="TEST_FILE" />
       <test-file value="$PROJECT_DIR$/tests/node.test.ts" />
-      <method v="2" />
-    </configuration>
-    <configuration name="routes.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/tests/routes.test.ts" />
       <method v="2" />
     </configuration>
     <configuration name="proxy" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v21.6.1/bin/node" path-to-js-file="dist/main.js" working-dir="$PROJECT_DIR$">
@@ -188,17 +171,17 @@
       <item itemvalue="Jest.Node Class" />
       <item itemvalue="Jest.Node Class.should not exceed allowed overload" />
       <item itemvalue="Jest.Node Class.should perform health check correctly" />
+      <item itemvalue="Jest.Tests in tests/" />
       <item itemvalue="Jest.node.test.ts" />
-      <item itemvalue="Jest.routes.test.ts" />
       <item itemvalue="Node.js.proxy" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.Tests in tests/" />
         <item itemvalue="Jest.Node Class.should perform health check correctly" />
         <item itemvalue="Jest.node.test.ts" />
         <item itemvalue="Jest.Node Class" />
         <item itemvalue="Jest.Node Class.should not exceed allowed overload" />
-        <item itemvalue="Jest.routes.test.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +242,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710409732164</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move code to multiple files and adapt tests">
+      <option name="closed" value="true" />
+      <created>1721603445815</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721603445815</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2.0.0">
+      <option name="closed" value="true" />
+      <created>1721603557839</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721603557839</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +288,9 @@
     <MESSAGE value="updated readme" />
     <MESSAGE value="added try{}catch{} around the post handler. &#10;updated readme." />
     <MESSAGE value="more relaxed success status code for healthcheck" />
-    <option name="LAST_COMMIT_MESSAGE" value="more relaxed success status code for healthcheck" />
+    <MESSAGE value="move code to multiple files and adapt tests" />
+    <MESSAGE value="2.0.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="2.0.0" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

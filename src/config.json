@@ -1,0 +1,12 @@
+{
+  "nodes": [
+    {
+      "id": "node1",
+      "url": "http://127.0.0.1:8080",
+      "cores": 4,
+      "allowedOverload": 1.25,
+      "healthUrl": "http://host1:4000/health",
+      "healthCheckInterval": 5000
+    }
+  ]
+}
