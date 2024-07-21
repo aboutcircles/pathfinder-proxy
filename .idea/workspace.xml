@@ -5,23 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d029eb68-6594-4895-9c0e-e011b64a2ae5" name="Changes" comment="more relaxed success status code for healthcheck">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loadBalancer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/methodFilter.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/node.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/nodeConfig.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rpcCall.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/loadBalancer.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/node.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/routes.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/testServer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filter/filter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/filter/methodFilter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthchecks/healthcheck.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/healthchecks/httpStatusCodeHealthcheck.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/rpcCall.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/statisticsLogger.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/statistics/statisticsQueries.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upstream/healthMonitor.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upstream/mocks/mockUpstream.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upstream/upstreamPool.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/upstream/upstreamService.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/healthMonitor.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/httpHealthCheck.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/methodFilter.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/methodFilter.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/statisticsLogger.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/statisticsQueries.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/upstreamPool.test.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +37,22 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jaensen"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jaensen&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/CirclesUBI/pathfinder-proxy.git",
-    "accountId": "94b7f831-328c-4cee-a852-bd6668dcb774"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/CirclesUBI/pathfinder-proxy.git&quot;,
+    &quot;accountId&quot;: &quot;94b7f831-328c-4cee-a852-bd6668dcb774&quot;
   }
-}]]></component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="1v5bft5h" />
   </component>
@@ -69,6 +70,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Jest.Express Routes.executor": "Run",
+    "Jest.Express Routes.should forward request and return 200 for allowed methods.executor": "Debug",
+    "Jest.Express Routes.should return 403 for disallowed methods.executor": "Run",
+    "Jest.LoadBalancer Class.executor": "Run",
+    "Jest.LoadBalancer Class.should correctly balance load between nodes.executor": "Run",
+    "Jest.LoadBalancer Class.should get statistics for all nodes.executor": "Run",
+    "Jest.LoadBalancer Class.should not assign request if all nodes are overloaded.executor": "Debug",
+    "Jest.MethodFilter.executor": "Run",
+    "Jest.Node Class.executor": "Run",
+    "Jest.Node Class.should not exceed allowed overload.executor": "Debug",
+    "Jest.Node Class.should perform health check correctly.executor": "Run",
+    "Jest.loadBalancer.test.ts.executor": "Run",
+    "Jest.methodFilter.test.ts.executor": "Run",
+    "Jest.node.test.ts.executor": "Run",
+    "Jest.routes.test.ts.executor": "Run",
     "Node.js.proxy.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -82,7 +98,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.jest.jest_package": "/home/daniel/src/CirclesUBI/pathfinder-proxy/pathfinder-proxy/node_modules/jest",
+    "nodejs.jest.jest_package": "/home/daniel/src/aboutcircles/pathfinder-proxy/node_modules/jest",
     "nodejs_interpreter_path": "/home/daniel/.nvm/versions/node/v21.6.1/bin/node",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "settings.nodejs",
@@ -102,66 +118,61 @@
       <recent name="$PROJECT_DIR$/src/statistics" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.proxy">
-    <configuration name="HealthMonitor" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
+  <component name="RunManager" selected="Jest.Node Class.should perform health check correctly">
+    <configuration name="Node Class" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/healthMonitor.test.ts" />
+      <test-file value="$PROJECT_DIR$/tests/node.test.ts" />
       <test-names>
-        <test-name value="HealthMonitor" />
+        <test-name value="Node Class" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="HealthMonitor.should be &quot;down&quot; when there are no upstreams to monitor" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
+    <configuration name="Node Class.should not exceed allowed overload" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/healthMonitor.test.ts" />
+      <test-file value="$PROJECT_DIR$/tests/node.test.ts" />
       <test-names>
-        <test-name value="HealthMonitor" />
-        <test-name value="should be &quot;down&quot; when there are no upstreams to monitor" />
+        <test-name value="Node Class" />
+        <test-name value="should not exceed allowed overload" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="HttpHealthCheck" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
+    <configuration name="Node Class.should perform health check correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/httpHealthCheck.test.ts" />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/node.test.ts" />
       <test-names>
-        <test-name value="HttpHealthCheck" />
+        <test-name value="Node Class" />
+        <test-name value="should perform health check correctly" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="StatisticsLogger" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
+    <configuration name="node.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/statisticsLogger.test.ts" />
-      <test-names>
-        <test-name value="StatisticsLogger" />
-      </test-names>
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/tests/node.test.ts" />
       <method v="2" />
     </configuration>
-    <configuration name="UpstreamPool" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
+    <configuration name="routes.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/upstreamPool.test.ts" />
-      <test-names>
-        <test-name value="UpstreamPool" />
-      </test-names>
+      <scope-kind value="TEST_FILE" />
+      <test-file value="$PROJECT_DIR$/tests/routes.test.ts" />
       <method v="2" />
     </configuration>
     <configuration name="proxy" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v21.6.1/bin/node" path-to-js-file="dist/main.js" working-dir="$PROJECT_DIR$">
@@ -174,20 +185,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Jest.HealthMonitor.should be &quot;down&quot; when there are no upstreams to monitor" />
-      <item itemvalue="Jest.StatisticsLogger" />
-      <item itemvalue="Jest.UpstreamPool" />
-      <item itemvalue="Jest.HealthMonitor" />
-      <item itemvalue="Jest.HttpHealthCheck" />
+      <item itemvalue="Jest.Node Class" />
+      <item itemvalue="Jest.Node Class.should not exceed allowed overload" />
+      <item itemvalue="Jest.Node Class.should perform health check correctly" />
+      <item itemvalue="Jest.node.test.ts" />
+      <item itemvalue="Jest.routes.test.ts" />
       <item itemvalue="Node.js.proxy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.StatisticsLogger" />
-        <item itemvalue="Jest.HealthMonitor" />
-        <item itemvalue="Jest.UpstreamPool" />
-        <item itemvalue="Jest.HealthMonitor.should be &quot;down&quot; when there are no upstreams to monitor" />
-        <item itemvalue="Jest.HttpHealthCheck" />
+        <item itemvalue="Jest.Node Class.should perform health check correctly" />
+        <item itemvalue="Jest.node.test.ts" />
+        <item itemvalue="Jest.Node Class" />
+        <item itemvalue="Jest.Node Class.should not exceed allowed overload" />
+        <item itemvalue="Jest.routes.test.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -255,22 +266,10 @@
     <option name="version" value="3" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/tests/statisticsQueries.test.js" />
-        <option value="$PROJECT_DIR$/tests/statisticsQueries.test.d.ts" />
-        <option value="$PROJECT_DIR$/tests/statisticsQueries.test.js.map" />
-        <option value="$PROJECT_DIR$/tests/statisticsQueries.test.d.ts.map" />
-        <option value="$PROJECT_DIR$/tests/healthMonitor.test.d.ts" />
-        <option value="$PROJECT_DIR$/tests/healthMonitor.test.d.ts.map" />
-        <option value="$PROJECT_DIR$/tests/healthMonitor.test.js" />
-        <option value="$PROJECT_DIR$/tests/healthMonitor.test.js.map" />
         <option value="$PROJECT_DIR$/tests/methodFilter.test.js.map" />
         <option value="$PROJECT_DIR$/tests/methodFilter.test.d.ts" />
         <option value="$PROJECT_DIR$/tests/methodFilter.test.js" />
         <option value="$PROJECT_DIR$/tests/methodFilter.test.d.ts.map" />
-        <option value="$PROJECT_DIR$/tests/httpHealthCheck.test.d.ts.map" />
-        <option value="$PROJECT_DIR$/tests/httpHealthCheck.test.js.map" />
-        <option value="$PROJECT_DIR$/tests/httpHealthCheck.test.js" />
-        <option value="$PROJECT_DIR$/tests/httpHealthCheck.test.d.ts" />
       </list>
     </option>
   </component>
