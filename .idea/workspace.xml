@@ -4,19 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d029eb68-6594-4895-9c0e-e011b64a2ae5" name="Changes" comment="added try{}catch{} around the post handler. &#10;updated readme.">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/build-and-push.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    <list default="true" id="d029eb68-6594-4895-9c0e-e011b64a2ae5" name="Changes" comment="more relaxed success status code for healthcheck">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filter/filter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/filter/methodFilter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthchecks/healthcheck.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/healthchecks/httpStatusCodeHealthcheck.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/rpcCall.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/statisticsLogger.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/statistics/statisticsQueries.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/upstream/healthMonitor.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/upstream/mocks/mockUpstream.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/upstream/upstreamPool.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/upstream/upstreamService.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,17 +31,36 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jaensen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/CirclesUBI/pathfinder-proxy.git",
+    "accountId": "94b7f831-328c-4cee-a852-bd6668dcb774"
+  }
+}]]></component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="1v5bft5h" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2KQCQiGR4YMGw7jIRB2ttbe7uCG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -45,16 +69,25 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Node.js.proxy.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TF_FMT": "false",
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "feat/load-balance",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/daniel/src/CirclesUBI/pathfinder-proxy/pathfinder-proxy",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "/home/daniel/src/CirclesUBI/pathfinder-proxy/pathfinder-proxy/node_modules/jest",
+    "nodejs_interpreter_path": "/home/daniel/.nvm/versions/node/v21.6.1/bin/node",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.typescriptcompiler",
-    "ts.external.directory.path": "/home/daniel/src/CirclesUBI/pathfinder-proxy/pathfinder-proxy/node_modules/typescript/lib"
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/home/daniel/src/CirclesUBI/pathfinder-proxy/pathfinder-proxy/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -62,17 +95,16 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/healthchecks" />
       <recent name="$PROJECT_DIR$/src/filter" />
       <recent name="$PROJECT_DIR$/src/upstream" />
       <recent name="$PROJECT_DIR$/src/statistics" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.proxy">
     <configuration name="HealthMonitor" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -85,7 +117,6 @@
     </configuration>
     <configuration name="HealthMonitor.should be &quot;down&quot; when there are no upstreams to monitor" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -99,7 +130,6 @@
     </configuration>
     <configuration name="HttpHealthCheck" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -112,7 +142,6 @@
     </configuration>
     <configuration name="StatisticsLogger" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -125,7 +154,6 @@
     </configuration>
     <configuration name="UpstreamPool" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -136,7 +164,7 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="proxy" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v18.5.0/bin/node" path-to-js-file="dist/main.js" working-dir="$PROJECT_DIR$">
+    <configuration name="proxy" type="NodeJSConfigurationType" path-to-node="$USER_HOME$/.nvm/versions/node/v21.6.1/bin/node" path-to-js-file="dist/main.js" working-dir="$PROJECT_DIR$">
       <envs>
         <env name="CORS_ORIGINS" value="http://localhost:5000,https://circlesubi.id" />
         <env name="PORT" value="5551" />
@@ -163,6 +191,14 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -173,6 +209,8 @@
       <updated>1673897407397</updated>
       <workItem from="1673897408772" duration="34878000" />
       <workItem from="1673981909694" duration="7797000" />
+      <workItem from="1710409526989" duration="3119000" />
+      <workItem from="1721228008103" duration="13080000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1673925213369</created>
@@ -202,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1673926630678</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="more relaxed success status code for healthcheck">
+      <option name="closed" value="true" />
+      <created>1710409732164</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710409732164</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +289,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="updated readme" />
     <MESSAGE value="added try{}catch{} around the post handler. &#10;updated readme." />
-    <option name="LAST_COMMIT_MESSAGE" value="added try{}catch{} around the post handler. &#10;updated readme." />
+    <MESSAGE value="more relaxed success status code for healthcheck" />
+    <option name="LAST_COMMIT_MESSAGE" value="more relaxed success status code for healthcheck" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
