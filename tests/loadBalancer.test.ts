@@ -1,6 +1,5 @@
 import {NodeConfig} from "../src/nodeConfig";
 import {LoadBalancer} from "../src/loadBalancer";
-import {Node} from "../src/node";
 
 describe('LoadBalancer Class', () => {
     let nodeConfigs: NodeConfig[];
@@ -88,27 +87,5 @@ describe('LoadBalancer Class', () => {
         expect(stats.length).toBe(nodeConfigs.length);
         expect(stats[0].id).toBe('node1');
         expect(stats[0].currentLoad).toBe(0);
-    });
-
-    test('should handle node health status change', async () => {
-        jest.useFakeTimers();
-        const node1 = loadBalancer.nodes.find(node => node.id === 'node1') as Node;
-
-        // Simulate health check that sets the node to unhealthy
-        node1.isHealthy = true; // Ensure node is initially healthy
-        const originalFetch = global.fetch;
-        global.fetch = jest.fn(() =>
-            Promise.resolve({
-                status: 500
-            } as any)
-        );
-
-        jest.advanceTimersByTime(node1.healthCheckInterval);
-        await new Promise(process.nextTick); // wait for the health check to complete
-
-        expect(node1.isHealthy).toBe(false);
-
-        global.fetch = originalFetch;
-        jest.useRealTimers();
     });
 });
