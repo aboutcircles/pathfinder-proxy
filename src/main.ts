@@ -12,14 +12,13 @@ import path from 'path';
 export const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
-const CONFIG_FILE = process.env.CONFIG_FILE || './config.json';
+const CONFIG_FILE = process.env.CONFIG_FILE || path.resolve(__dirname, './config.json');
 
 // Function to load configurations from a JSON file
 const loadConfigs = (filePath: string) => {
     try {
-        const configPath = path.resolve(__dirname, filePath);
-        const configData = fs.readFileSync(configPath, 'utf-8');
+        console.log(`Loading configurations from ${filePath}...`);
+        const configData = fs.readFileSync(filePath, 'utf-8');
         return JSON.parse(configData);
     } catch (error) {
         console.error(`Error loading configurations:`, error);
@@ -32,6 +31,7 @@ const config = loadConfigs(CONFIG_FILE);
 const nodeConfigs: NodeConfig[] = config.nodes;
 
 // Set up CORS with the specified configuration
+console.log(`Setting up CORS with configuration: ${JSON.stringify(config.server.cors)}`);
 app.use(cors(config.server.cors));
 
 // Create an instance of LoadBalancer with the given node configurations
@@ -106,6 +106,6 @@ app.get('/stats', (req: Request, res: Response) => {
 });
 
 // Start the Express server
-app.listen(PORT, () => {
-    console.log(`Load balancer server running on port ${PORT}`);
+app.listen(config.server.port, () => {
+    console.log(`Load balancer server running on port ${config.server.port}`);
 });

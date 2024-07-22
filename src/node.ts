@@ -55,7 +55,13 @@ export class Node {
 
     // Start periodic health check
     startHealthCheck() {
+        let inProgress = false;
         this.healthCheckTimer = setInterval(async () => {
+            if (inProgress) {
+                console.log(`Health check for node ${this.id} is already in progress...`);
+                this.isHealthy = false;
+                return;
+            }
             try {
                 console.log(`Performing health check for node ${this.id} (url: ${this.healthUrl})...`);
                 const response = await fetch(this.healthUrl);
