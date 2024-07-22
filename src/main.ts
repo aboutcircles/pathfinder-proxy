@@ -1,4 +1,5 @@
 import express, {Request, Response} from 'express';
+import cors from 'cors';
 import {fetch} from 'cross-fetch';
 import {NodeConfig} from "./nodeConfig";
 import {LoadBalancer} from "./loadBalancer";
@@ -14,21 +15,24 @@ app.use(express.json());
 const PORT = process.env.PORT || 3000;
 const CONFIG_FILE = process.env.CONFIG_FILE || './config.json';
 
-// Function to load node configurations from a JSON file
-const loadNodeConfigs = (filePath: string): NodeConfig[] => {
+// Function to load configurations from a JSON file
+const loadConfigs = (filePath: string) => {
     try {
         const configPath = path.resolve(__dirname, filePath);
         const configData = fs.readFileSync(configPath, 'utf-8');
-        const config = JSON.parse(configData);
-        return config.nodes;
+        return JSON.parse(configData);
     } catch (error) {
-        console.error(`Error loading node configurations:`, error);
+        console.error(`Error loading configurations:`, error);
         process.exit(1);
     }
 };
 
-// Load node configurations from config.json
-const nodeConfigs: NodeConfig[] = loadNodeConfigs(CONFIG_FILE);
+// Load configurations from config.json
+const config = loadConfigs(CONFIG_FILE);
+const nodeConfigs: NodeConfig[] = config.nodes;
+
+// Set up CORS with the specified configuration
+app.use(cors(config.server.cors));
 
 // Create an instance of LoadBalancer with the given node configurations
 const loadBalancer = new LoadBalancer(nodeConfigs);
